@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+body {
+	margin: 0 auto;
+	padding: 1em;
+}
+
+#hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+    width: 100%;
+    background-color: #D5DDBC;
+    margin: 15px;
+}
+
+#hero img{
+    width: 350px;
+    height: 300px;
+    padding: 5px;
+    margin: 20px;
+    overflow: hidden;
+    -webkit-filter: grayscale(0%);
+   filter: grayscale(90%);
+}
+
+
+#hero text{
+ display: none;
+}
+
+
+#hero:hover text{
+    display: inline;
+    color: black;
+    transform: translateY(0px);
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 30px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+#hero:hover img{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    
+}
+
+h1{
+    font-family: 'Bebas Neue', cursive;
+    background-color: black;
+    color: #F24236;
+    margin: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+   
+}
+
+.banner{
+    width:100%;
+    margin-top: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    margin: 15px;
+    color: black;
+}
+
+p {
+    display: flex;
+    text-align: justify;
+    margin: 15px;
+    line-height: 25px;
+    padding-right: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    margin: 15px;
+}
+
+@media only screen and (max-width: 767px){
+    #hero{
+        display: grid;
+        grid-template-columns: 1fr;  
+        width: 100%;
+        margin: 15px;
+        background-color: white;
+    }
+}
+
+
