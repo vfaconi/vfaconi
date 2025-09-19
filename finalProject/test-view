@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask and Vue.js Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+         <h1>Test</h1>
+        <ul>
+            <li v-for="item in items" :key="item">{{ item }}</li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Loading...',
+                items: []
+            },
+            created() {
+                axios.get('/api/data')
+                    .then(response => {
+                        this.message = response.data.message;
+                        this.items = response.data.items;
+                    })
+                    .catch(error => {
+                        this.message = 'Error: ' + error;
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
